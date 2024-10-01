@@ -1,0 +1,49 @@
+Medicine Information and Alternatives Lookup System 💊
+
+This project is a Python-based tool that allows users to input a medicine name and receive a description of the medicine along with possible alternatives. It uses CSV data to store information about medicines, and retrieves the relevant details based on user input.
+
+🔍 Features:
+Takes user input for the medicine name.
+Searches for and returns the medicine's description from a CSV file.
+Lists alternative medicines (if available).
+Provides clear and concise outputs for ease of use.
+
+💻 Technologies Used:
+Python: Main programming language used for scripting and logic implementation.
+CSV: Used for storing and retrieving the dataset of medicines and their alternatives.
+Input processing: Captures user input for the medicine search.
+Data lookup: Looks up the relevant medicine information from the CSV file.
+
+🚀 How to Use:
+Clone the repository:
+bash
+Copy code
+git clone https://github.com/your-username/medicine-info-lookup.git
+Navigate to the project directory:
+bash
+Copy code
+cd medicine-info-lookup
+Install any required dependencies (if applicable):
+bash
+Copy code
+pip install -r requirements.txt
+Run the Python script:
+bash
+Copy code
+python medicine_lookup.py
+Enter the name of a medicine when prompted, and the system will display its description and similar alternatives.
+
+📂 CSV Format:
+The CSV file should have the following columns:
+name: The name of the medicine.
+description: A brief description of the medicine.
+similar_medicines: A comma-separated list of alternative medicines.
+
+Enter the medicine name: paracetamol
+Description:
+Paracetamol is a medication used to treat pain and reduce fever.
+
+Similar medicines:
+aspirin, ibuprofen
+📄 License:
+This project is licensed under the MIT License - see the LICENSE file for details.
