@@ -1,0 +1,31 @@
+import csv
+def load_medicine_data(csv_file):
+    medicines = []
+    with open("F:\\B.tech\\medinechatgpt.csv", 'r', newline='', encoding='utf-8') as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            medicines.append(row)
+    return medicines
+
+def find_medicine_info(medicines, medicine_name):
+    for med in medicines:
+        if med['name'].lower() == medicine_name.lower():
+            description = med['description']
+            similar_medicines = med['similar_medicines'].split(',')
+            return description, similar_medicines
+    return None, []
+
+if __name__ == "__main__":
+    medicine_data = load_medicine_data("F:\\B.tech\\medinechatgpt.csv")
+    input_medicine = input("Enter the medicine name:")
+    description, similar_medicines = find_medicine_info(medicine_data, input_medicine)
+    if description:
+        print("Description:")
+        print(description)
+        print()
+        print("Similar medicines:")
+        for med in similar_medicines:
+            print(med)
+    else:
+        print(f"Medicine '{input_medicine}' not found in the dataset.")
+    input()
